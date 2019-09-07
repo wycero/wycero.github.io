@@ -166,7 +166,6 @@ function arr_proc(s){
     return rec_proc(s);
 }
 function proc(s,filename){
-s="[h1]Moved to[url]//wycero.github.io[/url][/h1]";
     ss="";cur=0;len=0;
     raw_mode=false;
     sta=["root"];
