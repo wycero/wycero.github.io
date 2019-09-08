@@ -1,4 +1,4 @@
 #!/bin/bash
-cd "../source"
+cd "./source"
 rm -r ../blog/*
 node ../generators/main.gen.js

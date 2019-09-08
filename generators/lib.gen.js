@@ -85,7 +85,7 @@ function rec_proc(s){
             }
             let ret="<!DOCTYPE html><html><title>"+tit+` - Wycero's Blog</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="wycero-1.css">
+        <link rel="stylesheet" type="text/css" href="../res/wycero-1.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.js"></script>
@@ -93,16 +93,18 @@ function rec_proc(s){
         <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
         <script >hljs.initHighlightingOnLoad();</script>
         <body id="body">
+	<div class="bg-overlay"></div>
         <div class="top-bar">
-        <a href="index.html" class="tpi icon-top"><img src="home.svg" class="svg"></img></a>
+        <a href="index.html" class="tpi icon-top"><img src="../res/home.svg" class="svg"></img></a>
         <p class="tpi">`+tit+`</p>
-        <a href="javascript:;" onclick="javascript:hit_content();" class="tpi icon-top"><img src="top.svg" class="svg"></img></a></div>
+        <a href="javascript:;" onclick="javascript:hit_content();" class="tpi icon-top"><img src="../res/top.svg" class="svg"></img></a></div>
         <br><br><br><br>`;
         if(tit!="Home")ret+=`<div class="article">`+tt+`</div>`;
         else ret+=tt;
         if(bookht!="")ret+=`<nav id="table-content">`+bookht+`</nav>`;
         ret+=`<footer>
-        <script src="wycero-1.js"></script>
+        <script src="../res/wycero-1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.js"></script>
         <p>Copyright `+new Date().getFullYear()+` wycero</p>
         <p>Powered By:
         <a href="http://php.net">PHP</a>
@@ -268,7 +270,7 @@ for(let i=1;i<=6;i++){
 	});
 }
 function make_index(){
-let index_page="@{\"title\":\"Home\"}\n[img]juruo.svg[/img]\n";
+let index_page="@{\"title\":\"Home\"}\n[img]../res/juruo.svg[/img]\n";
 pages.sort(function(a,b){return b.date-a.date;});
 for(let i=0;i<pages.length;i++)index_page+="[urlbox=\""+pages[i].filename+"\"]"+pages[i].title+"[/urlbox]";
 return index_page;
