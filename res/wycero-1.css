@@ -46,7 +46,7 @@ a.tpi.icon-top{flex:1}
 	padding-top:0.05em;font-size:200%;
 }
 .article a{color:#d7ecff;/*text-decoration:none;*/}
-.footer a{color:#d7ecff;/*text-decoration:none;*/}
+footer a{color:#d7ecff;/*text-decoration:none;*/}
 .posti{color:#d7ecff;text-decoration:none;}
 .posti>a{display:block;color:#d7ecff;text-decoration:none;text-align:center;font-size:1.5em;padding:10px;}
 .tpi{color:#d7ecff;text-decoration:none;}
@@ -118,12 +118,12 @@ code{
 	margin-left:60px;
 	margin-right:0px;
 	border-left-style:solid;
-	border-left-color:#ff0000;
+	border-left-color:#8080FF;
 	border-left-width:6px;
 	padding-left:16px;
 	padding-top:4px;
 	padding-bottom:4px;
-	background-color:#ff700030;
+	background-color:#ffFFFF30;
 }
 .article blockquote>blockquote{
 	margin-right:10px;
