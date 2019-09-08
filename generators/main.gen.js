@@ -13,8 +13,8 @@ lib.register_tag("del",function(com_name,inner_html,inner_raw,arg){
 function url_do(com_name,inner_html,inner_raw,arg){
     let targ="";
 	if(typeof(arg)=="undefined")targ=inner_raw;else targ=arg;
-	if(com_name=="url")return"<a href=\""+escape(targ)+"\">"+inner_html+"</a>";
-    else return"<div class=\"posti\"><a href=\""+escape(targ)+"\">"+inner_html+"</a></div>";
+	if(com_name=="url")return"<a href=\""+targ+"\">"+inner_html+"</a>";
+    else return"<div class=\"posti\"><a href=\""+targ+"\">"+inner_html+"</a></div>";
 }
 lib.register_tag("url",url_do);lib.register_tag("urlbox",url_do);
 lib.register_tag("quote",function(com_name,inner_html,inner_raw,arg){
