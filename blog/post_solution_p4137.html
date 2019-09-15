@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.js"></script>
-        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
-        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
         <script >hljs.initHighlightingOnLoad();</script>
         <body id="body">
 	<div class="bg-overlay"></div>
@@ -17,8 +17,7 @@
 我们考虑莫队的做法。如果我们删除一个数，那么用被删的数更新mex即可。如果加入一个数，似乎比较麻烦（至少本蒟蒻没想出来）。<br>
 于是我们借鉴回滚莫队的思想，写出只需删除不需插入的莫队。<br>
 大于n的数对答案无影响，在处理时可以直接忽略。<br>
-<pre><code>
-// luogu-judger-enable-o2
+<pre><code>// luogu-judger-enable-o2
 #include&lt;bits/stdc++.h&gt;
 #define rep(i,a,b) for(int i=a;i&lt;=b;i++)
 using namespace std;

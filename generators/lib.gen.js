@@ -89,8 +89,8 @@ function rec_proc(s){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.js"></script>
-        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
-        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
         <script >hljs.initHighlightingOnLoad();</script>
         <body id="body">
 	<div class="bg-overlay"></div>

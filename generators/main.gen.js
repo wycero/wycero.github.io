@@ -25,6 +25,8 @@ lib.register_tag("img",function(com_name,inner_html,inner_raw,arg){
 	return"<img class=\"article-img\" src=\""+inner_html+"\" alt=\"\"/>";
 });
 lib.register_tag("code",function(com_name,inner_html,inner_raw,arg){
+	if(inner_html[0]=='\n')
+		inner_html=inner_html.substr(1,inner_html.length-1);
 	return"<pre><code>"+inner_html+"</code></pre>";},lib.raw_tag);
 lib.register_tag("raw_html",function(com_name,inner_html,inner_raw,arg){
 	return inner_raw;},lib.raw_tag);
