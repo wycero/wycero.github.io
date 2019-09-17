@@ -97,7 +97,7 @@ h2.postii{text-align:center;text-decoration:none;}
 .posti>a:hover{box-shadow:inset 5px 0px 0px 0px #d7ecff;}
 h2.postii::before{display:none;}
 .article del{
-	background-color:#000000;
+	background-color:#dce7ff;
 	transition:background 0.1s;
 	padding:auto;
 }
