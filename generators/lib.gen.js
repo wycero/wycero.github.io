@@ -105,6 +105,7 @@ function rec_proc(s){
         ret+=`<footer>
         <script src="../res/wycero-1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/aes.min.js"></script>
         <p>Copyright `+new Date().getFullYear()+` wycero</p>
         <p>Powered By:
         <a href="http://php.net">PHP</a>
