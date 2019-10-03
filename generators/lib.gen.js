@@ -281,7 +281,7 @@ for(let i=1;i<=6;i++){
 	});
 }
 function make_index(){
-let index_page="@{\"title\":\"Home\"}\n[img]../res/juruo.svg[/img]\n";
+let index_page="@{\"title\":\"Home\"}\n";
 pages.sort(function(a,b){return b.date-a.date;});
 for(let i=0;i<pages.length;i++)index_page+="[urlbox=\""+pages[i].filename+"\"]"+bb_escape(pages[i].title)+"[/urlbox]";
 return index_page;
