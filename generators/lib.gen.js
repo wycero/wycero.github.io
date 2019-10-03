@@ -31,7 +31,7 @@ function make_error(s){
     return "<html><body><h1 style=\"color:red\">ERROR</h1><p>"
         +s+"</p><br>"+"<p>"+text_linu()+"</p>"+"</body></html>";
 }
-// This is a tool func. Make it global
+// These are tool functions. Make them global
 make_escape=function(s){
     let t="";
     for(let i=0;i<s.length;i++){
@@ -40,6 +40,16 @@ make_escape=function(s){
         else if(s[i]=="&")t+="&amp;";
         else if(s[i]=="<")t+="&lt;";
         else if(s[i]==">")t+="&gt;";
+        else t+=s[i];
+    }
+    return t;
+}
+bb_escape=function(s){
+    let t="";
+    for(let i=0;i<s.length;i++){
+        if(s[i]=="[")t+="[[";
+        else if(s[i]=="]")t+="]]";
+        else if(s[i]=="@")t+="[@";
         else t+=s[i];
     }
     return t;
@@ -273,7 +283,7 @@ for(let i=1;i<=6;i++){
 function make_index(){
 let index_page="@{\"title\":\"Home\"}\n[img]../res/juruo.svg[/img]\n";
 pages.sort(function(a,b){return b.date-a.date;});
-for(let i=0;i<pages.length;i++)index_page+="[urlbox=\""+pages[i].filename+"\"]"+pages[i].title+"[/urlbox]";
+for(let i=0;i<pages.length;i++)index_page+="[urlbox=\""+pages[i].filename+"\"]"+bb_escape(pages[i].title)+"[/urlbox]";
 return index_page;
 }
 module.exports={

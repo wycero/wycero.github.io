@@ -1,6 +1,11 @@
-@{"title":"[WIP]Table Clone","description":"Do mortu patrino de tencent"}
+@{"title":"[WIP]Table Clone","description":"Do tencent, mortu patrino via"}
 Tencent forced to turn on device lock and I can't log in from other devices.
 And therefore I can't work on other computers.
-So tencent nmsl!
-This page will be used 4 a copy of the table, and the table will be encrypted.
-The password is the princess' OI name.
+基，线性基
+基变换，矩阵意义及基本运算
+行列式
+逆矩阵
+特征向量，特征值
+多项式三角函数
+多项式反三角函数
+快速阶乘算法
