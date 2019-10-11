@@ -48,7 +48,7 @@ bb_escape=function(s){
     let t="";
     for(let i=0;i<s.length;i++){
         if(s[i]=="[")t+="[[";
-        else if(s[i]=="]")t+="]]";
+        else if(s[i]=="]")t+="[]";
         else if(s[i]=="@")t+="[@";
         else t+=s[i];
     }
@@ -123,6 +123,16 @@ function rec_proc(s){
         <a href="https://highlightjs.org/">Highlightjs</a></p>
         <p>Hosted On github.io</p>
         </footer>
+	<script>
+var $buoop = {required:{e:-4,f:-3,o:-3,s:-1,c:-3},insecure:true,api:2019.10 };
+function $buo_f(){
+ var e = document.createElement("script");
+ e.src = "//browser-update.org/update.min.js";
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
         <script>
             renderMathInElement(document.body,
            {
