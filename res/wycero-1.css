@@ -1,4 +1,21 @@
+@keyframes spinner-icon-rotate{
+  0% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(1);
+  }
+}
+@keyframes dance{
+	0%{transform:translate(0,0);}
+	20%{transform:translate(0,0.2em);}
+	40%{transform:translate(0.2em,0);}
+	60%{transform:translate(0.2em,0);}
+	80%{transform:translate(0,0.2em);}
+	100%{transform:translate(0,0);}
+}
 body{
+
 	background-color:rgba(255,250,250);
 	color:#000000;
 	font-size:16px;
@@ -15,7 +32,7 @@ code{
         flex-direction:row;
         width:100vw;
         height:2.6em;
-        background-color:rgba(48,235,48);
+        background-color:rgba(255,0,0);
         display:flex;
 	z-index:1010;
 	box-shadow:0 0 4px 4px /*rgb(42,142,209)*/rgb(0,0,10,0.2);
@@ -35,11 +52,10 @@ a.tpi.icon-top{flex:1}
 .tpi{
 	padding-top:0.05em;font-size:200%;
 }
-.article a,footer a{color:rgb(48,235,48);/*text-decoration:none;*/}
-.article a:visited,footer a:visited{color:rgb(24,118,24);}
-.posti{color:#000000;text-decoration:none;}
-.posti>a{display:block;color:#000000;text-decoration:none;text-align:center;font-size:1.5em;padding:10px;}
-.tpi{color:#00000080;text-decoration:none;}
+a{color:rgb(228,47,38);/*text-decoration:none;*/}
+.posti{color:#A00000;text-decoration:none;}
+.posti>a{display:block;color:#A00000;text-decoration:none;text-align:center;font-size:1.5em;padding:10px;}
+.tpi{color:#A00000;text-decoration:none;}
 a.tpi{
 	transition:all 0.1s;
 }
@@ -85,9 +101,9 @@ h2.postii{text-align:center;text-decoration:none;}
 	outline:none;
 }
 /*.posti>a:focus{background-color:#f0f0f0;}*/
-.posti>a:hover{box-shadow:inset 5px 0px 0px 0px #000000;}
+.posti>a:hover{box-shadow:inset 5px 0px 0px 0px #AA0000;}
 .posti>a:active{background-color:#f0f0f0;
-box-shadow:inset 5px 0px 0px 0px #000000;
+box-shadow:inset 5px 0px 0px 0px #AA0000;
 }
 h2.postii::before{display:none;}
 .article del{
@@ -112,12 +128,12 @@ code{
 	margin-left:60px;
 	margin-right:0px;
 	border-left-style:solid;
-	border-left-color:rgba(48,235,48);
+	border-left-color:#ff0000;
 	border-left-width:6px;
 	padding-left:16px;
 	padding-top:4px;
 	padding-bottom:4px;
-	background-color:#70ff0030;
+	background-color:#ff700030;
 }
 .article blockquote>blockquote{
 	margin-right:10px;
@@ -142,7 +158,6 @@ code{
 	padding:8px;
 	box-shadow:0 0 6px 1px rgba(0,0,10,0.2);
 	border-radius:5px;
-	word-wrap:break-word;
 }
 #table-content{
 	top:2.6em;
@@ -189,4 +204,15 @@ code{
 	margin-right:16px;
 
 }
+*{
+	/*font-size:0 !important;*/
+}
 
+*:before{
+	font-size:16px !important;
+	content:"AFO";
+	display:block;
+}
+body *,*:before{
+	animation:dance 0.2s linear infinite;
+}
