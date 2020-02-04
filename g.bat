@@ -1,3 +1,3 @@
-cd source
-del /q ..\blog\*
+cd newsource
+del /q ..\newblog\*
 node main.gen.js

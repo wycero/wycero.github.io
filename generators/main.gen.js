@@ -35,11 +35,11 @@ function htmlize(s){return s.substr(0,s.length-4)+".html";}
 for(let i=0;i<curdir.length;i++){
     if(curdir[i].endWith(".txt")){
         console.log("Proceeding BBCODE: "+curdir[i]);
-        fs.writeFileSync("../blog/"+htmlize(curdir[i]),
+        fs.writeFileSync("../newblog/"+htmlize(curdir[i]),
         	lib.proc(fs.readFileSync(curdir[i],"utf8"),htmlize(curdir[i]),fs.statSync(curdir[i]).mtimeMs));
     }else if(/*(!curdir[i].endWith(".gen.js"))&&(curdir[i]!="g")*/true){
         console.log("Copying File: "+curdir[i]);
-        fs.writeFileSync("../blog/"+curdir[i],fs.readFileSync(curdir[i]));
+        fs.writeFileSync("../newblog/"+curdir[i],fs.readFileSync(curdir[i]));
     }else console.log("Skipping: "+curdir[i]);
 }
-fs.writeFileSync("../blog/index.html",lib.proc(lib.make_index(),""));
+fs.writeFileSync("../newblog/index.html",lib.proc(lib.make_index(),""));
