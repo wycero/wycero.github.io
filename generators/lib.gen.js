@@ -19,7 +19,7 @@ var lin=0;var col=0;
 var tagfun={}
 var raw_tag=1;var nopair_tag=-1;
 // Finish the subtree, returns false when the whole tree is proceeded
-function text_linu(){return "In file"+fine+",line "+lin+", col "+col;}
+function text_linu(){return "In file "+fine+",line "+lin+", col "+col;}
 function collapse(){
     if(sta.length==1)return false;
     sta2[sta.length-2].push(sta2[sta.length-1]);
@@ -153,7 +153,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
             else return"<ol start=\""+s[1]+"\">"+tt+"</ol>";
         }
         default:{
-            console.log("Warning: Unknown Tag: "+s[0]+"\n"+text_linu+"\n");
+            console.log("Warning: Unknown Tag: "+s[0]+"\n"+text_linu()+"\n");
             return "["+s[0]+"]"+tt+"[/"+s[0]+"]";}
     }
 }
@@ -293,7 +293,7 @@ for(let i=1;i<=6;i++){
 function make_index(){
 let index_page="@{\"title\":\"Home\"}\n";
 pages.sort(function(a,b){return b.date-a.date;});
-for(let i=0;i<pages.length;i++)index_page+="[urlbox=\""+pages[i].filename+"\"]"+bb_escape(pages[i].title)+"[/urlbox]";
+for(let i=0;i<pages.length;i++)if(pages[i].hidden);else{index_page+="[urlbox=\""+pages[i].filename+"\"]"+bb_escape(pages[i].title)+"[/urlbox]";}
 return index_page;
 }
 module.exports={
