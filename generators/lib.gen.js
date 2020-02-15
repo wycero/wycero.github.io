@@ -18,8 +18,9 @@ var bookmarx=[];
 var lin=0;var col=0;
 var tagfun={}
 var raw_tag=1;var nopair_tag=-1;
-// Finish the subtree, returns false when the whole tree is proceeded
+//Doesn't work well
 function text_linu(){return "In file "+fine+",line "+lin+", col "+col;}
+// Finish the subtree, returns false when the whole tree is proceeded
 function collapse(){
     if(sta.length==1)return false;
     sta2[sta.length-2].push(sta2[sta.length-1]);

@@ -207,4 +207,17 @@ code{
 *{
 	/*font-size:0 !important;*/
 }
-
+.emotion{
+	text-align:center;
+}
+.emotion.good{
+	color:black;
+}
+.emotion.soso{
+	color:black;
+	background-color:gray;
+}
+.emotion.bad{
+	color:gray;
+	background-color:black;
+}

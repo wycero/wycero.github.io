@@ -21,6 +21,13 @@ lib.register_tag("quote",function(com_name,inner_html,inner_raw,arg){
             if(typeof(arg)=="undefined")return"<blockquote>"+inner_html+"</blockquote>";
             else return"<blockquote><cite>"+make_escape(arg)+": </cite><br>"+inner_html+"</blockquote>";
 });
+lib.register_tag("e",function(com_name,inner_html,inner_raw,arg){
+	var em="";
+	if(inner_raw.search(":-\\)")!=-1)em="good";
+	else if(inner_raw.search(":|")!=-1)em="soso";
+	else if(inner_raw.search("=\\(")!=-1)em="bad";
+	return"<div class=\"emotion "+em+"\">"+inner_html+"</div>";
+});
 lib.register_tag("img",function(com_name,inner_html,inner_raw,arg){
 	return"<img class=\"article-img\" src=\""+inner_html+"\" alt=\"\"/>";
 });
