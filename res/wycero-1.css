@@ -209,9 +209,10 @@ code{
 }
 .emotion{
 	text-align:center;
+	font-size:2em;
 }
 .emotion.good{
-	color:black;
+	color:#00c000;
 }
 .emotion.soso{
 	color:black;
