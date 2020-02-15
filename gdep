@@ -1,4 +1,4 @@
 ./g
 git add .
 git commit -m"Auto Update"
-gut push
+git push
