@@ -106,7 +106,7 @@ h2.postii{text-align:center;text-decoration:none;}
 box-shadow:inset 5px 0px 0px 0px #AA0000;
 }
 h2.postii::before{display:none;}
-.article del{
+.article del,h3 del{
 	background-color:#000000;
 	transition:background 0.1s;
 	padding:auto;

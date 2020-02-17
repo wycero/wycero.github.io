@@ -24,8 +24,8 @@ lib.register_tag("quote",function(com_name,inner_html,inner_raw,arg){
 lib.register_tag("e",function(com_name,inner_html,inner_raw,arg){
 	var em="";
 	if(inner_raw.search(":-\\)")!=-1)em="good";
-	else if(inner_raw.search(":|")!=-1)em="soso";
-	else if(inner_raw.search("=\\(")!=-1)em="bad";
+	else if(inner_raw.search(":-|")!=-1)em="soso";
+	else if(inner_raw.search(":-\\(")!=-1)em="bad";
 	return"<div class=\"emotion "+em+"\">"+inner_html+"</div>";
 });
 lib.register_tag("img",function(com_name,inner_html,inner_raw,arg){
